@@ -29,7 +29,7 @@ public class ChoreService {
     }
 
     public Chore updateChore(Chore chore) {
-        Chore existingChore = choreRepository.findById(chore.getChore_Id())
+        Chore existingChore = choreRepository.findById(chore.getChoreId())
                 .orElseThrow(() -> new RuntimeException("Chore not found"));
 
         existingChore.setChore_Name(chore.getChore_Name());
